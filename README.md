@@ -57,7 +57,7 @@ console.log("foo");
  // sends a (debug level) message of 'hello brian, how are you?' to the logging system
 console.log("hello %s, how are you?", "brian");
 
-// sends an error level message of 'Uh oh' to the logging system
+// sends an error message of 'Uh oh' to the logging system (level assert?) in the event the assertion fails
 console.assert(a + b, "Uh oh!");
 ```
 
