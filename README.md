@@ -22,10 +22,12 @@ Some features are widely implemented, but not universally.
 **Specify too deeply what the logging system must do with input.**
 Features should be described in universal logging API terms.  In the past some browsers have assumed the console object was only present if there was something to log to (i.e. a developer console was open), that creates problems that can go uncaught until delivery and is unfortunate.  Some APIs specify that error messages "will be red" or "have an (x) icon" in the console, those sorts of things should be left to the console implementations themselves.
 
+**Include this work within a ECMA, W3C or WHATWG deliverable.**
+For now, this work will remain outside of those groups.
 
 Proposal
 =======
-A new ECMAScript logging module is defined (and imported by the Standard Prelude).  It contains the following methods/signatures:
+The de-facto standard console contains the following methods/signatures:
 
 
 
@@ -55,3 +57,22 @@ console.log("hello %s, how are you?", "brian");
 // sends an error level message of 'Uh oh' to the logging system
 console.assert(a + b, "Uh oh!");
 ```
+
+
+### Supplementary Links
+
+* Existing support
+  * Firebug: https://getfirebug.com/wiki/index.php/Console_API
+  * Chrome: https://developers.google.com/chrome-developer-tools/docs/console-api
+  * IE: http://msdn.microsoft.com/en-us/library/ie/hh772169(v=vs.85).aspx
+  * Firefox: https://developer.mozilla.org/en-US/docs/Web/API/console
+* Previous standardization work: 
+  * http://sideshowbarker.github.io/console-spec/
+  * [thread on public-script-coord](http://lists.w3.org/Archives/Public/public-script-coord/2013JanMar/0152.html)
+  * fitzgen (FF) said…
+
+> what do you think about a github organization thats just docs on console apis? 
+
+### Ideas
+
+* `console.foo()` should never throw. ([Implemented in Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=629607))
