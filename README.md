@@ -25,6 +25,9 @@ Features should be described in universal logging API terms.  In the past some b
 **Include this work within a ECMA, W3C or WHATWG deliverable.**
 For now, this work will remain outside of those groups.
 
+**Specify the Command Line API**
+As it's not used in user code, it's much lower priority to solidify.
+
 Proposal
 =======
 The de-facto standard console contains the following methods/signatures:
@@ -76,3 +79,11 @@ console.assert(a + b, "Uh oh!");
 ### Ideas
 
 * `console.foo()` should never throw. ([Implemented in Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=629607))
+
+### Notes
+
+* I spoke with engineers behind Safari Web Inspector, Firefox Developer Tools, IE F12 Developer Tools, Chrome DevTools (circa July 2013). All are supportive of an effort like this. ~paulirish
+* This document to be very communicative about what current browser support is. 
+* There will be a subset of the console which MUST be implemented and a larger set of SHOULD behavior (such as the `%O` formatting of `.log()`)
+* We'll also document any newly added methods, such as [`console.msIsIndependentlyComposed()`](http://msdn.microsoft.com/en-us/library/ie/hh781493(v=vs.85).aspx)
+
