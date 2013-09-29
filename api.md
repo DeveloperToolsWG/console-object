@@ -129,7 +129,7 @@ Creates a new logging group that is initially collapsed instead of open, as with
 console.groupCollapsed("Authenticating user '%s'", user);
 console.log("User authenticated");
 console.groupEnd();
-console.log("A group-less log trace.");
+console.log("A group-less log message.");
 ```
 
 
