@@ -6,10 +6,13 @@ Implementations should use a proxy implementation to ensure that calling unimple
  
 #### `console.assert(expression, object)` 
 
-If the specified expression is false, the message is written to the console along with a stack trace. In the following example, the assert message is written to the console only when the document contains fewer than five child nodes:
+If the specified expression is false, the message is written to the console along with a stack trace.
 ```javascript
+// Assuming the element matching #myList contains 10 or more children
 var list = document.querySelector('#myList');
-console.assert(list.childNodes.length < 10, "List item count is > 10");
+console.assert(list.childNodes.length < 10, "#myList has 10 or more children!");
+
+> #myList has 10 or more children!
 ```
 
 #### `console.clear()` 
@@ -26,47 +29,54 @@ Writes the the number of times that count() has been invoked at the same line an
 
 In the following example count() is invoked each time the login() function is invoked.
 ```javascript
-function login(user) {
-    console.count("Login called");
-    // login() code...
-} 
+function test () {
+    function login(user) {
+        console.count("Login called for " + user);
+    } 
+    login("brian");
+    login("paul");
+    login("paul");
+}
+test();
+
+> Login called for brian: 1
+  Login called for paul: 1
+  Login called for paul: 2
 ```
 
 #### `console.debug(object [,object, ...])` 
 
-This method is an alias for to `console.log()`.
+This method is an alias for to [`console.log()`](#consolelogobject--object-).
 
 
 #### `console.dir(object)` 
 
-Prints a JavaScript representation of the specified object. If the object being logged is an HTML element, then the properties of its DOM representation are displayed, as shown below:
+Prints a JavaScript representation of the specified object. 
+If the object being logged is an HTML element, the JavaScript Object view is forced (as opposed to the Element view)
+
 ```javascript
 console.dir(document.body);
-```
 
-You can also use the object formatter (%O) in a `console.log()` statement to print out an element's JavaScript properties:
-
-```javascript
-console.log("document body: %O", document.body);
-```
-
-Calling `console.dir()` on a JavaScript object is equivalent to calling `console.log()` on the same object—they both print out the object's JavaScript properites in a tree format.
-
+// the above is equivalent to ...
+// console.log("%0", document.body);
+````
 
 #### `console.dirxml(object)` 
 
-Prints an XML representation of the specified object, as it would appear in the Elements panel. For HTML elements, calling this method is equivalent to calling `console.log()`.
+Prints an XML/HTML Element representation of the specified object if possible or  the JavaScript Object view if it is not.
 
 ```javascript
 var list = document.querySelector("#myList");
-console.dirxml();
-```
+console.dirxml(list);
 
-%O is a shortcut for dir %o acts either as dir or dirxml depending on the object type (non-dom or dom)
+// The above is equivalent to ...
+// console.log("%o", list);
+```
 
 #### `console.error(object [, object, ...])` 
 
-Similar to `console.log()`, `console.error()` and also includes a stack trace from where the method was called.
+Logs an `error` level message, including a stack trace indicating where it was called.  It's input signature matches 
+`console.log()`.
 
 ```javascript
 function connectToServer() {
@@ -81,7 +91,7 @@ connectToServer();
 
 #### `console.exception(error-object[, object, ...])` 
 
-Prints an error message and stack trace of JavaScript execution (This exists in firebug, I think it is essentially `console.error`).
+An alias for  `console.error`.
 
 
 
@@ -128,7 +138,7 @@ Closes the most recently created logging group that previously created with `con
 
 #### `console.info(object [, object, ...])` 
 
-This method is identical to `console.log()`
+This method is identical to [`console.log()`](#consolelogobject--object-).
 
 
 #### `console.isIndependentlyComposed(object)` 
@@ -138,7 +148,7 @@ Todo... describe this.
 
 #### `console.log(object [, object, ...])` 
 
-Displays a message in the console. You pass one or more objects to this method, each of which are evaluated and concatenated into a space-delimited string. The first parameter you pass to `console.log()` may contain format specifiers, a string token composed of the percent sign (%) followed by a letter that indicates the formatting to be applied.
+Logs an `info` level message. You pass one or more objects to this method, each of which are evaluated and concatenated into a space-delimited string. The first parameter you pass to [`console.log()`](#consolelogobject--object-) may contain [Format Specifiers](#format-specifiers).
 
 
 #### `console.profile([label])` 
@@ -203,7 +213,9 @@ Prints a stack trace from the point where the method was called, including links
 
 #### `console.warn(object [, object, ...])` 
 
-This method is like `console.log()` but also displays a yellow warning icon along with the logged message.
+Logs a `warn` level message, it's signature is identical to [`console.log()`](#consolelogobject--object-).
+
+
 ```javascript
 console.warn("User limit reached! (%d)", userPoints);
 ```
@@ -211,14 +223,14 @@ console.warn("User limit reached! (%d)", userPoints);
 ### Format Specifiers
 Format specifiers are supported by some `console` methods, they allow developers to suggest specifically formatted data be output.
 
-| Specifier         | Description                                                   |
-|:----------------- |:--------------------------------------------------------------| 
-| `%s`              | Formats the value as a string                                 |
-| `%d`, `%i`        | Formats the value as an integer                               |
-| `%f`              | Formats the value as a floating point value                   |
-| `%o`              | Formats the value as an expandable DOM Element                |
-| `%O`              | Formats the value as an expandable JavaScript Object          |
-| `%c`              | Formats the output string according to CSS styles you provide |
+| Specifier         | Description                                                                        |
+|:----------------- |:-----------------------------------------------------------------------------------| 
+| `%s`              | Formats the value as a string (cooercing via toString() if necessary)              |
+| `%d`, `%i`        | Formats the value as an integer                                                    |
+| `%f`              | Formats the value as a floating point value                                        |
+| `%o`              | Formats the value as an expandable DOM Element (or JavaScript Object if it is not) |
+| `%O`              | Formats the value as an expandable JavaScript Object                               |
+| `%c`              | Formats the output string according to CSS styles you provide                      |
 
 * Firebug support limiting the number of decimal places via `2f`.
 
