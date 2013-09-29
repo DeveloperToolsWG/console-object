@@ -60,8 +60,9 @@ Prints an XML representation of the specified object, as it would appear in the 
 ```javascript
 var list = document.querySelector("#myList");
 console.dirxml();
-%O is a shortcut for dir %o acts either as dir or dirxml depending on the object type (non-dom or dom)
 ```
+
+%O is a shortcut for dir %o acts either as dir or dirxml depending on the object type (non-dom or dom)
 
 console.error(object [, object, ...])
 =====
