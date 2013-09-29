@@ -214,7 +214,7 @@ Format specifiers are supported by some `console` methods, they allow developers
 | Specifier         | Description                                                   |
 |:----------------- |:--------------------------------------------------------------| 
 | `%s`              | Formats the value as a string                                 |
-| `%d`              | Formats the value as an integer                               |
+| `%d`, `%i`        | Formats the value as an integer                               |
 | `%f`              | Formats the value as a floating point value                   |
 | `%o`              | Formats the value as an expandable DOM Element                |
 | `%O`              | Formats the value as an expandable JavaScript Object          |
@@ -222,7 +222,18 @@ Format specifiers are supported by some `console` methods, they allow developers
 
 * Firebug support limiting the number of decimal places via `2f`.
 
+```javascript
+console.log("Hello %s", "Brian");
+> Hello Brian
 
+// If the number of values exceeds the number of formatters, inputs should be appended/space delimited 
+console.log("I am %s and I have:", "1", 2, 3, 4);
+> I am 1 and I have: 2 3 4
+
+// Only the first argument to methods fill apply format specfiers.
+console.log("I am", "Paul", "and I have %d:", "1", 2, 3, 4);
+> I am Paul and I have %d: 1 2 3 4
+```
 ------------
 ## Properties
 
