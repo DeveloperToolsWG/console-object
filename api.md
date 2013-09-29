@@ -1,3 +1,6 @@
+Implementations should use a proxy implementation to ensure that calling unimplemented methods will never throw.
+
+
 -------------------
 methods
 
