@@ -1,3 +1,4 @@
+The console object must be exposed programatically regardless of whether the console is visible or additional tools are installed.
 Implementations should use a proxy implementation to ensure that calling unimplemented methods will never throw.
 
 
