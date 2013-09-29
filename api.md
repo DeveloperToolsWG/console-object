@@ -2,8 +2,8 @@ Implementations should use a proxy implementation to ensure that calling unimple
 
 
 -------------------
-methods
-
+## methods
+ 
 #### `console.assert(expression, object)` 
 
 If the specified expression is false, the message is written to the console along with a stack trace. In the following example, the assert message is written to the console only when the document contains fewer than five child nodes:
@@ -207,7 +207,7 @@ console.warn("User limit reached! (%d)", userPoints);
 
 
 ------------
-Properties
+## Properties
 
 #### `console.profiles` 
 
