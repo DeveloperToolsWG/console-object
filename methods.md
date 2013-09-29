@@ -19,4 +19,5 @@
 * count
 * exception
 * table
-* 
+* info
+* msIsIndependentlyComposed
