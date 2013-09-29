@@ -208,6 +208,18 @@ This method is like `console.log()` but also displays a yellow warning icon alon
 console.warn("User limit reached! (%d)", userPoints);
 ```
 
+### Format Specifiers
+Format specifiers are supported by some `console` methods, they allow developers to suggest specifically formatted data be output.
+
+| Specifier         | Description                                                   |
+|:----------------- |:--------------------------------------------------------------| 
+| %s                | Formats the value as a string                                 |
+| %d                | Formats the value as an integer                               |
+| %f                | Formats the value as a floating point value                   |
+| %o                | Formats the value as an expandable DOM Element                |
+| %O                | Formats the value as an expandable JavaScript Object          |
+| %c                | Formats the output string according to CSS styles you provide |
+
 
 ------------
 ## Properties
