@@ -5,3 +5,18 @@
 * trace
 * time
 * timeEnd
+* assert
+* clear
+* dir
+* dirxml
+* trace
+* group
+* groupCollapsed
+* groupEnd
+* timeStamp
+* profile
+* profileend
+* count
+* exception
+* table
+* 
