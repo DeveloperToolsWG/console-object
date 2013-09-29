@@ -4,7 +4,7 @@ Implementations should use a proxy implementation to ensure that calling unimple
 -------------------
 methods
 
-console.assert(expression, object)
+`console.assert(expression, object)`
 =====
 If the specified expression is false, the message is written to the console along with a stack trace. In the following example, the assert message is written to the console only when the document contains fewer than five child nodes:
 ```javascript
@@ -12,7 +12,7 @@ var list = document.querySelector('#myList');
 console.assert(list.childNodes.length < 10, "List item count is > 10");
 ```
 
-console.clear()
+`console.clear()`
 =====
 Clears the console.
 ```javascript
@@ -20,7 +20,7 @@ console.clear();
 ```
 
 
-console.count(label)
+`console.count(label)`
 =====
 Writes the the number of times that count() has been invoked at the same line and with the same label.
 
@@ -32,12 +32,12 @@ function login(user) {
 } 
 ```
 
-console.debug(object [,object, ...])
+`console.debug(object [,object, ...])`
 =====
 This method is an alias for to `console.log()`.
 
 
-console.dir(object)
+`console.dir(object)`
 =====
 Prints a JavaScript representation of the specified object. If the object being logged is an HTML element, then the properties of its DOM representation are displayed, as shown below:
 ```javascript
@@ -50,10 +50,10 @@ You can also use the object formatter (%O) in a `console.log()` statement to pri
 console.log("document body: %O", document.body);
 ```
 
-Calling console.dir() on a JavaScript object is equivalent to calling `console.log()` on the same object—they both print out the object's JavaScript properites in a tree format.
+Calling `console.dir()` on a JavaScript object is equivalent to calling `console.log()` on the same object—they both print out the object's JavaScript properites in a tree format.
 
 
-console.dirxml(object)
+`console.dirxml(object)`
 =====
 Prints an XML representation of the specified object, as it would appear in the Elements panel. For HTML elements, calling this method is equivalent to calling `console.log()`.
 
@@ -64,7 +64,7 @@ console.dirxml();
 
 %O is a shortcut for dir %o acts either as dir or dirxml depending on the object type (non-dom or dom)
 
-console.error(object [, object, ...])
+`console.error(object [, object, ...])`
 =====
 Similar to `console.log()`, `console.error()` and also includes a stack trace from where the method was called.
 
@@ -79,13 +79,13 @@ connectToServer();
 ```
 
 
-console.exception(error-object[, object, ...])
+`console.exception(error-object[, object, ...])`
 ====
 Prints an error message and stack trace of JavaScript execution (This exists in firebug, I think it is essentially `console.error`).
 
 
 
-console.group(object[, object, ...])
+`console.group(object[, object, ...])`
 =====
 Starts a new logging group with an optional title. All console output that occurs after calling this method and calling `console.groupEnd() `appears in the same visual group.
 
@@ -109,7 +109,7 @@ console.groupEnd();
 console.groupEnd();
 ```
 
-console.groupCollapsed(object[, object, ...])
+`console.groupCollapsed(object[, object, ...])`
 =====
 Creates a new logging group that is initially collapsed instead of open, as with `console.group()`.
 
@@ -121,31 +121,31 @@ console.log("A group-less log trace.");
 ```
 
 
-console.groupEnd()
+`console.groupEnd()`
 =====
-Closes the most recently created logging group that previously created with `console.group()` or `console.groupCollapsed()`. See console.group() and console.groupCollapsed() for examples.
+Closes the most recently created logging group that previously created with `console.group()` or `console.groupCollapsed()`. See `console.group()` and `console.groupCollapsed()` for examples.
 
 
-console.info(object [, object, ...])
+`console.info(object [, object, ...])`
 =====
-This method is identical to console.log()
+This method is identical to `console.log()`
 
 
-console.isIndependentlyComposed
+`console.isIndependentlyComposed(object)`
 ====
 Todo... describe this.
 
 
-console.log(object [, object, ...])
+`console.log(object [, object, ...])`
 ====
-Displays a message in the console. You pass one or more objects to this method, each of which are evaluated and concatenated into a space-delimited string. The first parameter you pass to log() may contain format specifiers, a string token composed of the percent sign (%) followed by a letter that indicates the formatting to be applied.
+Displays a message in the console. You pass one or more objects to this method, each of which are evaluated and concatenated into a space-delimited string. The first parameter you pass to `console.log()` may contain format specifiers, a string token composed of the percent sign (%) followed by a letter that indicates the formatting to be applied.
 
 
-console.profile([label])
+`console.profile([label])`
 ====
-Calling this function initiates a JavaScript CPU profile with an optional label.  To complete the profile, call console.profileEnd(). 
+Calling this function initiates a JavaScript CPU profile with an optional label.  To complete the profile, call `console.profileEnd()`. 
 
-Each profile you create with this method is added to the console.profiles[] array. Each member of the array is an object for the profile that can be stringified, useful in continuous integration/remote debugging setups.
+Each profile you create with this method is added to the `console.profiles` array. Each member of the array is an object for the profile that can be stringified, useful in continuous integration/remote debugging setups.
 
 In the following example a CPU profile is started at the entry to a function that is suspected to consume excessive CPU resources, and ended when the function exits.
 ```javascript
@@ -156,7 +156,7 @@ function processPixels() {
 }
 ```
 
-console.profileEnd()
+`console.profileEnd()`
 ====
 Stops the current JavaScript CPU profiling session, if one is in progress, and prints the report to the Profiles panel.
 ```javascript
@@ -164,14 +164,14 @@ console.profileEnd()
 ```
 
 
-console.table(data[, columns])
+`console.table(data[, columns])`
 ====
 Allows to log provided data using tabular layout.  `data` can be an array of arrays or list of objects), the optional second (array) parameter can be used to filter specific particular columns/properties to be logged.
 
 
-console.time(label)
+`console.time(label)`
 ====
-Starts a new timer with an associated label. When console.timeEnd() is called with the same label, the timer is stopped the elapsed time displayed in the Console. Timer values are accurate to the sub-millisecond.
+Starts a new timer with an associated label. When `console.timeEnd()` is called with the same label, the timer is stopped the elapsed time displayed in the Console. Timer values are accurate to the sub-millisecond.
 ```javascript
 console.time("Array initialize");
 var array= new Array(1000000);
@@ -181,24 +181,24 @@ for (var i = array.length - 1; i >= 0; i--) {
 console.timeEnd("Array initialize");
 ```
 
-console.timeEnd(label)
+`console.timeEnd(label)`
 ====
 Stops the timer with the specified label and prints the elapsed time.
 
 For example usage, see `console.time()`.
 
 
-console.timeStamp([label])
+`console.timeStamp([label])`
 ====
 This method adds an event to the Timeline during a recording session. This lets you visually correlate your code generated time stamp to other events, such as screen layout and paints, that are automatically added to the Timeline.
 
 See Marking the Timeline for an example of using `console.timeStamp()`.
 
-console.trace()
+`console.trace()`
 ===
 Prints a stack trace from the point where the method was called, including links to the specific lines in the JavaScript source. A counter indicates the number of times that `console.trace()` method was invoked at that point.
 
-console.warn(object [, object, ...])
+`console.warn(object [, object, ...])`
 ====
 This method is like `console.log()` but also displays a yellow warning icon along with the logged message.
 ```javascript
@@ -209,7 +209,7 @@ console.warn("User limit reached! (%d)", userPoints);
 ------------
 Properties
 
-console.profiles
+`console.profiles`
 ====
 
 
