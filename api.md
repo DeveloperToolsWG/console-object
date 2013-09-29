@@ -2,7 +2,7 @@ Implementations should use a proxy implementation to ensure that calling unimple
 
 
 -------------------
-## methods
+## Methods
  
 #### `console.assert(expression, object)` 
 
