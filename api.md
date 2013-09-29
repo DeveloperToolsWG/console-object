@@ -213,12 +213,14 @@ Format specifiers are supported by some `console` methods, they allow developers
 
 | Specifier         | Description                                                   |
 |:----------------- |:--------------------------------------------------------------| 
-| %s                | Formats the value as a string                                 |
-| %d                | Formats the value as an integer                               |
-| %f                | Formats the value as a floating point value                   |
-| %o                | Formats the value as an expandable DOM Element                |
-| %O                | Formats the value as an expandable JavaScript Object          |
-| %c                | Formats the output string according to CSS styles you provide |
+| `%s`              | Formats the value as a string                                 |
+| `%d`              | Formats the value as an integer                               |
+| `%f`              | Formats the value as a floating point value                   |
+| `%o`              | Formats the value as an expandable DOM Element                |
+| `%O`              | Formats the value as an expandable JavaScript Object          |
+| `%c`              | Formats the output string according to CSS styles you provide |
+
+* Firebug support limiting the number of decimal places via `2f`.
 
 
 ------------
