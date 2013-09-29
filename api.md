@@ -157,9 +157,9 @@ Logs an `info` level message. You pass one or more objects to this method, each 
 
 Allows to log provided data using tabular layout.  `data` can be an array of arrays or list of objects), the optional second (array) parameter can be used to filter specific particular columns/properties to be logged.
 
-#### `console.trace()` 
+#### `console.trace(object [, object, ...])` 
 
-Prints a stack trace from the point where the method was called, including links to the specific lines in the JavaScript source. A counter indicates the number of times that `console.trace()` method was invoked at that point.
+Equivalent to `console.log` except that it also adds stack trace from the point where the method was called, including links to the specific lines in the JavaScript source. A counter indicates the number of times that `console.trace()` method was invoked at that point.
 
 #### `console.warn(object [, object, ...])` 
 
