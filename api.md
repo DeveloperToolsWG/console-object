@@ -4,6 +4,8 @@ Implementations should use a proxy implementation to ensure that calling unimple
 -------------------
 ## Methods
  
+
+### Logging
 #### `console.assert(expression, object)` 
 
 If the specified expression is false, the message is written to the console along with a stack trace.
@@ -151,6 +153,53 @@ Todo... describe this.
 Logs an `info` level message. You pass one or more objects to this method, each of which are evaluated and concatenated into a space-delimited string. The first parameter you pass to [`console.log()`](#consolelogobject--object-) may contain [Format Specifiers](#format-specifiers).
 
 
+#### `console.table(data[, columns])` 
+
+Allows to log provided data using tabular layout.  `data` can be an array of arrays or list of objects), the optional second (array) parameter can be used to filter specific particular columns/properties to be logged.
+
+#### `console.trace()` 
+
+Prints a stack trace from the point where the method was called, including links to the specific lines in the JavaScript source. A counter indicates the number of times that `console.trace()` method was invoked at that point.
+
+#### `console.warn(object [, object, ...])` 
+
+Logs a `warn` level message, it's signature is identical to [`console.log()`](#consolelogobject--object-).
+
+
+```javascript
+console.warn("User limit reached! (%d)", userPoints);
+```
+
+#### Format Specifiers
+Format specifiers are supported by some `console` methods, they allow developers to suggest specifically formatted data be output.
+
+| Specifier         | Description                                                                        |
+|:----------------- |:-----------------------------------------------------------------------------------| 
+| `%s`              | Formats the value as a string (cooercing via toString() if necessary)              |
+| `%d`, `%i`        | Formats the value as an integer                                                    |
+| `%f`              | Formats the value as a floating point value                                        |
+| `%o`              | Formats the value as an expandable DOM Element (or JavaScript Object if it is not) |
+| `%O`              | Formats the value as an expandable JavaScript Object                               |
+| `%c`              | Formats the output string according to CSS styles you provide                      |
+
+* Firebug support limiting the number of decimal places via `2f`.
+
+```javascript
+console.log("Hello %s", "Brian");
+> Hello Brian
+
+// If the number of values exceeds the number of formatters, inputs should be appended/space delimited 
+console.log("I am %s and I have:", "1", 2, 3, 4);
+> I am 1 and I have: 2 3 4
+
+// Only the first argument to methods fill apply format specfiers.
+console.log("I am", "Paul", "and I have %d:", "1", 2, 3, 4);
+> I am Paul and I have %d: 1 2 3 4
+```
+
+
+### Profiling
+
 #### `console.profile([label])` 
 
 Calling this function initiates a JavaScript CPU profile with an optional label.  To complete the profile, call `console.profileEnd()`. 
@@ -175,10 +224,8 @@ console.profileEnd()
 ```
 
 
-#### `console.table(data[, columns])` 
 
-Allows to log provided data using tabular layout.  `data` can be an array of arrays or list of objects), the optional second (array) parameter can be used to filter specific particular columns/properties to be logged.
-
+### Timing
 
 #### `console.time(label)` 
 
@@ -207,45 +254,7 @@ This method adds an event to the Timeline during a recording session. This lets 
 * Safari and Chrome used to support `console.markTimeline()` but this was deprecated after discussion with Firebug and `timeStamp()` was agreed on. (*webkit Ticket link?*)
 
 
-#### `console.trace()` 
 
-Prints a stack trace from the point where the method was called, including links to the specific lines in the JavaScript source. A counter indicates the number of times that `console.trace()` method was invoked at that point.
-
-#### `console.warn(object [, object, ...])` 
-
-Logs a `warn` level message, it's signature is identical to [`console.log()`](#consolelogobject--object-).
-
-
-```javascript
-console.warn("User limit reached! (%d)", userPoints);
-```
-
-### Format Specifiers
-Format specifiers are supported by some `console` methods, they allow developers to suggest specifically formatted data be output.
-
-| Specifier         | Description                                                                        |
-|:----------------- |:-----------------------------------------------------------------------------------| 
-| `%s`              | Formats the value as a string (cooercing via toString() if necessary)              |
-| `%d`, `%i`        | Formats the value as an integer                                                    |
-| `%f`              | Formats the value as a floating point value                                        |
-| `%o`              | Formats the value as an expandable DOM Element (or JavaScript Object if it is not) |
-| `%O`              | Formats the value as an expandable JavaScript Object                               |
-| `%c`              | Formats the output string according to CSS styles you provide                      |
-
-* Firebug support limiting the number of decimal places via `2f`.
-
-```javascript
-console.log("Hello %s", "Brian");
-> Hello Brian
-
-// If the number of values exceeds the number of formatters, inputs should be appended/space delimited 
-console.log("I am %s and I have:", "1", 2, 3, 4);
-> I am 1 and I have: 2 3 4
-
-// Only the first argument to methods fill apply format specfiers.
-console.log("I am", "Paul", "and I have %d:", "1", 2, 3, 4);
-> I am Paul and I have %d: 1 2 3 4
-```
 ------------
 ## Properties
 
