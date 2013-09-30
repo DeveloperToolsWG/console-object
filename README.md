@@ -69,6 +69,7 @@ console.assert(a + b, "Uh oh!");
   * Chrome: https://developers.google.com/chrome-developer-tools/docs/console-api
   * IE: http://msdn.microsoft.com/en-us/library/ie/hh772169(v=vs.85).aspx
   * Firefox: https://developer.mozilla.org/en-US/docs/Web/API/console
+      * [Meta bug tracking Firefox DevTools support of missing features](https://bugzilla.mozilla.org/show_bug.cgi?id=922204)
 * Previous standardization work: 
   * http://sideshowbarker.github.io/console-spec/
   * [thread on public-script-coord](http://lists.w3.org/Archives/Public/public-script-coord/2013JanMar/0152.html)
@@ -86,4 +87,3 @@ console.assert(a + b, "Uh oh!");
 * This document to be very communicative about what current browser support is. 
 * There will be a subset of the console which MUST be implemented and a larger set of SHOULD behavior (such as the `%O` formatting of `.log()`)
 * We'll also document any newly added methods, such as [`console.msIsIndependentlyComposed()`](http://msdn.microsoft.com/en-us/library/ie/hh781493\(v=vs.85\).aspx)
-
