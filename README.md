@@ -20,7 +20,7 @@ Non-goals
 Some features are widely implemented, but not universally.
 
 **Specify too deeply what the logging system must do with input.**
-Features should be described in universal logging API terms.  In the past some browsers have assumed the console object was only present if there was something to log to (i.e. a developer console was open), that creates problems that can go uncaught until delivery and is unfortunate.  Some APIs specify that error messages "will be red" or "have an (x) icon" in the console, those sorts of things should be left to the console implementations themselves.
+Features should be described in universal logging API terms.  In the past some browsers have assumed the console object was only present if there was something to log to (i.e. a developer console was open), that creates problems that can go uncaught until delivery and is unfortunate.  Some APIs specify that error messages "will be read" or "have an (x) icon" in the console, those sorts of things should be left to the console implementations themselves.
 
 **Include this work within a ECMA, W3C or WHATWG deliverable.**
 For now, this work will remain outside of those groups.
