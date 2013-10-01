@@ -23,7 +23,10 @@ Some features are widely implemented, but not universally.
 Features should be described in universal logging API terms.  In the past some browsers have assumed the console object was only present if there was something to log to (i.e. a developer console was open), that creates problems that can go uncaught until delivery and is unfortunate.  Some APIs specify that error messages "will be read" or "have an (x) icon" in the console, those sorts of things should be left to the console implementations themselves.
 
 **Include this work within a ECMA, W3C or WHATWG deliverable.**
-For now, this work will remain outside of those groups.
+For now, this work will remain outside of those groups for two important reasons.  
+1. It is not at all clear where it should live ultimately.  Both ECMA and the W3C have expressed interest in it.  ECMA because it is essentially a core module that has nothing itself to do with browsers and W3C because the [Browser Testing and Tools WG](http://www.w3.org/2011/08/browser-testing-charter.html) has a charter which *is* intended to improve the standards for development within the browser.
+2. #1 should not stop progress.  We have actually come a very long way without that approach and the reality is that it is significantly easier to begin work and make progress toward the common goal that (hopefully) eventually moves to one of those groups, maybe even helps inform such a decision.
+
 
 **Specify the Command Line API**
 As it's not used in user code, it's much lower priority to solidify.
