@@ -145,7 +145,7 @@ Closes the most recently created logging group that previously created with `con
 
 #### `console.info(object [, object, ...])` 
 
-This method is identical to [`console.log()`](#consolelogobject--object-).
+Logs an `info` level message, it's signature is identical to [`console.log()`](#consolelogobject--object-).
 
 
 #### `console.isIndependentlyComposed(object)` 
@@ -155,7 +155,7 @@ Todo... describe this.
 
 #### `console.log(object [, object, ...])` 
 
-Logs an `info` level message. You pass one or more objects to this method, each of which are evaluated and concatenated into a space-delimited string. The first parameter you pass to [`console.log()`](#consolelogobject--object-) may contain [Format Specifiers](#format-specifiers).
+Logs a `debug` level message. You pass one or more objects to this method, each of which are evaluated and concatenated into a space-delimited string. The first parameter you pass to [`console.log()`](#consolelogobject--object-) may contain [Format Specifiers](#format-specifiers).
 
 
 #### `console.table(data[, columns])` 
