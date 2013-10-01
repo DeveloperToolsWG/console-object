@@ -256,7 +256,7 @@ For example usage, see `console.time()`.
 This method adds an event to the Timeline during a recording session. This lets you visually correlate your code generated time stamp to other events, such as screen layout and paints, that are automatically added to the Timeline.
 
 * IE11 uses `performance.mark()` from the ********** spec to mark the Timeline and does not support `console.timeStamp`
-* Safari and Chrome used to support `console.markTimeline()` but this was deprecated after discussion with Firebug and `timeStamp()` was agreed on. (*webkit Ticket link?*)
+* Safari and Chrome used to support `console.markTimeline()` but this was [deprecated after discussion with Firebug](https://bugs.webkit.org/show_bug.cgi?id=63317) and `timeStamp()` was agreed on.
 
 
 
