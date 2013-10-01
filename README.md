@@ -24,8 +24,9 @@ Features should be described in universal logging API terms.  In the past some b
 
 **Include this work within a ECMA, W3C or WHATWG deliverable.**
 For now, this work will remain outside of those groups for two important reasons.  
-1. It is not at all clear where it should live ultimately.  Both ECMA and the W3C have expressed interest in it.  ECMA because it is essentially a core module that has nothing itself to do with browsers and W3C because the [Browser Testing and Tools WG](http://www.w3.org/2011/08/browser-testing-charter.html) has a charter which *is* intended to improve the standards for development within the browser.
-2. #1 should not stop progress.  We have actually come a very long way without that approach and the reality is that it is significantly easier to begin work and make progress toward the common goal that (hopefully) eventually moves to one of those groups, maybe even helps inform such a decision.
+* It is not at all clear where it should live ultimately.  Both ECMA and the W3C have expressed interest in it.  ECMA because it is essentially a core module that has nothing itself to do with browsers and W3C because the [Browser Testing and Tools WG](http://www.w3.org/2011/08/browser-testing-charter.html) has a charter which *is* intended to improve the standards for development within the browser.
+
+* The above should not stop progress.  We have actually come a very long way without that approach and the reality is that it is significantly easier to begin work and make progress toward the common goal that (hopefully) eventually moves to one of those groups, maybe even helps inform such a decision.
 
 
 **Specify the Command Line API**
