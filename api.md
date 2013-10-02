@@ -146,7 +146,7 @@ Closes the most recently created logging group that previously created with `con
 
 #### `console.info(object [, object, ...])` 
 
-This method is identical to [`console.log()`](#consolelogobject--object-).
+Logs an `info` level message, it's signature is identical to [`console.log()`](#consolelogobject--object-).
 
 
 #### `console.isIndependentlyComposed(object)` 
@@ -156,7 +156,7 @@ Todo... describe this.
 
 #### `console.log(object [, object, ...])` 
 
-Logs an `info` level message. You pass one or more objects to this method, each of which are evaluated and concatenated into a space-delimited string. The first parameter you pass to [`console.log()`](#consolelogobject--object-) may contain [Format Specifiers](#format-specifiers).
+Logs a `debug` level message. You pass one or more objects to this method, each of which are evaluated and concatenated into a space-delimited string. The first parameter you pass to [`console.log()`](#consolelogobject--object-) may contain [Format Specifiers](#format-specifiers).
 
 
 #### `console.table(data[, columns])` 
@@ -257,7 +257,7 @@ For example usage, see `console.time()`.
 This method adds an event to the Timeline during a recording session. This lets you visually correlate your code generated time stamp to other events, such as screen layout and paints, that are automatically added to the Timeline.
 
 * IE11 uses `performance.mark()` from the ********** spec to mark the Timeline and does not support `console.timeStamp`
-* Safari and Chrome used to support `console.markTimeline()` but this was deprecated after discussion with Firebug and `timeStamp()` was agreed on. (*webkit Ticket link?*)
+* Safari and Chrome used to support `console.markTimeline()` but this was [deprecated after discussion with Firebug](https://bugs.webkit.org/show_bug.cgi?id=63317) and `timeStamp()` was agreed on.
 
 
 
