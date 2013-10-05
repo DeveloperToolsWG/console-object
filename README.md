@@ -91,3 +91,25 @@ console.assert(a + b, "Uh oh!");
 * This document to be very communicative about what current browser support is. 
 * There will be a subset of the console which MUST be implemented and a larger set of SHOULD behavior (such as the `%O` formatting of `.log()`)
 * We'll also document any newly added methods, such as [`console.msIsIndependentlyComposed()`](http://msdn.microsoft.com/en-us/library/ie/hh781493\(v=vs.85\).aspx)
+
+### [Contributors](https://github.com/DeveloperToolsWG/console-object/graphs/contributors)
+
+### Browser support
+
+Two recent efforts to document current support for console APIs:
+
+[dev tools console api support](https://docs.google.com/spreadsheet/ccc?key=0ArzNE_OHjXkQdF9FTjF4ZlQzYWREUHplUlNPcXNpb2c&usp=drive_web#gid=0) by the Firebug Working Group
+
+<a href="https://docs.google.com/spreadsheet/ccc?key=0ArzNE_OHjXkQdF9FTjF4ZlQzYWREUHplUlNPcXNpb2c&usp=drive_web#gid=0">
+![image](https://f.cloud.github.com/assets/39191/1274947/5861de5c-2dda-11e3-938e-b112dde4b02a.png)
+</a>
+
+[console API support](http://www.2ality.com/2013/10/console-api.html) by Dr. Axel Rauschmayer
+
+<a href="http://www.2ality.com/2013/10/console-api.html">
+![image](https://f.cloud.github.com/assets/39191/1274955/b7d40fcc-2dda-11e3-94c0-3357433fc90a.png)
+</a>
+
+
+This will project will, in turn, subsume the above support data and provide the canonical support table.
+
