@@ -225,10 +225,10 @@ function processPixels() {
 #### `console.profileEnd()` 
 
 Stops the current JavaScript CPU profiling session, if one is in progress, and prints the report to the Profiles panel.
-```javascript
-console.profileEnd()
-```
 
+#### `console.timeline([label])` and `console.timelineEnd([label])` 
+
+Initates (and ends) a timeline profiling session. Supported [in Chrome](https://chromiumcodereview.appspot.com/24027002).
 
 
 ### Timing
