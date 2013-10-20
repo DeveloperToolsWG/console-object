@@ -149,9 +149,9 @@ Closes the most recently created logging group that previously created with `con
 Logs an `info` level message, it's signature is identical to [`console.log()`](#consolelogobject--object-).
 
 
-#### `console.isIndependentlyComposed(object)` 
-
-Todo... describe this.
+#### `console.isIndependentlyComposed(DOMElement)` 
+Writes a simple boolean rendered indicating whether a DOMElement is composited independently from the main UI thread and will not risk blocking UI operations or script execution. 
+_(Non-standard/proposed.  Currently only supported in IE10+, prefixed, and at least in IE10 it is only present on the console object if the *javascript debugger is in debug mode*)_
 
 
 #### `console.log(object [, object, ...])` 
