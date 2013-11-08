@@ -151,7 +151,7 @@ Logs an `info` level message, it's signature is identical to [`console.log()`](#
 
 #### `console.isIndependentlyComposed(DOMElement)` 
 Writes a simple boolean rendered indicating whether a DOMElement is composited independently from the main UI thread and will not risk blocking UI operations or script execution. 
-_(Non-standard/proposed.  Currently only supported in IE10+, prefixed, and at least in IE10 it is only present on the console object if the *javascript debugger is in debug mode*)_
+_(Non-standard/proposed.  Currently only supported in IE10+, prefixed, and at least in IE10 it is only present on the console object if the *javascript debugger is in debug mode* [see IE reference](http://msdn.microsoft.com/en-us/library/jj680148\(v=vs.85\).aspx)_
 
 
 #### `console.log(object [, object, ...])` 
