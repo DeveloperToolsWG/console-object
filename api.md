@@ -33,7 +33,7 @@ console.clear();
 
 #### `console.count(label)` 
 
-Writes the the number of times that count() has been invoked at the same line and with the same label.
+Writes the the number of times that count() has been invoked with the same label.
 
 In the following example count() is invoked each time the login() function is invoked.
 ```javascript
