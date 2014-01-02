@@ -52,7 +52,29 @@ test();
   Login called for paul: 2
 ```
 
-#### `console.debug(object [,object, ...])` 
+
+If no label is provided then the script url and line number of the `console.count` statement is used for associating the counter with `console.count` invocation.
+
+In the following example count() is invoked without a label from two different functions.
+```javascript
+function test1() {
+  console.count();
+}
+
+function test2() {
+  console.count();
+}
+
+test1();
+test2();
+test1();
+
+> : 1            test-script.js:3
+  : 1            test-script.js:7
+  : 2            test-script.js:3
+```
+
+#### `console.debug(object [,object, ...])`
 
 This method is an alias for to [`console.log()`](#consolelogobject--object-).
 
