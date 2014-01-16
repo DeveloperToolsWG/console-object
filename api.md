@@ -187,7 +187,7 @@ Allows to log provided data using tabular layout.  `data` can be an array of arr
 
 #### `console.trace(object [, object, ...])` 
 
-Equivalent to `console.log` except that it also adds stack trace from the point where the method was called, including links to the specific lines in the JavaScript source. A counter indicates the number of times that `console.trace()` method was invoked at that point.
+Equivalent to `console.log` except that it also adds stack trace from the point where the method was called.  Implementations should include links to the specific lines in the JavaScript source if possible, and may provide grouping and an (optional/configurable) counter indicating the number of times that `console.trace()` method was invoked at that point.
 
 #### `console.warn(object [, object, ...])` 
 
