@@ -199,7 +199,8 @@ console.warn("User limit reached! (%d)", userPoints);
 ```
 
 #### Format Specifiers
-Format specifiers are supported by some `console` methods, they allow developers to suggest specifically formatted data be output.
+Format specifiers are supported by some `console` methods. They allow developers to suggest specifically formatted data to be output.
+The functions supporting these specifiers are [`console.debug()`](#consoledebugobject-object-), [`console.error()`](#consoleerrorobject--object-), [`console.info()`](#consoleinfoobject--object-), [`console.log()`](#consolelogobject--object-) and [`console.warn()`](#consolewarnobject--object-).
 
 | Specifier         | Description                                                                        |
 |:----------------- |:-----------------------------------------------------------------------------------| 
@@ -210,7 +211,7 @@ Format specifiers are supported by some `console` methods, they allow developers
 | `%O`              | Formats the value as an expandable JavaScript Object                               |
 | `%c`              | Formats the output string according to CSS styles you provide                      |
 
-* Firebug support limiting the number of decimal places via `2f`.
+* Firebug supports limiting the number of decimal places via `%.xf`, where `x` is the number of decimal places.
 
 ```javascript
 console.log("Hello %s", "Brian");
