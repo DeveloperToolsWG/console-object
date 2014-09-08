@@ -43,7 +43,7 @@ The de-facto standard console contains the following methods/signatures:
 // sends a message of the appropriate level to the logging system
 // supported levels are 'debug', 'info', 'warn', 'error' (log is an alias for debug)
 // message can contain standard % tokens and optional args provide data
-console[level](message, ...);
+console.[level](message, ...);
 
 
 // send a message containing the properties of an object to the logging system (debug level)
