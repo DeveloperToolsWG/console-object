@@ -111,7 +111,7 @@ Three recent efforts to document current support for console APIs:
 ![image](https://f.cloud.github.com/assets/39191/1274955/b7d40fcc-2dda-11e3-94c0-3357433fc90a.png)
 </a>
 
-[Console API Comparison](https://docs.google.com/document/d/1rtCIorwj4veWN2_wCVQqkitx2V1GSRxmuKByQtmUCr8/edit?usp=sharing) by the IE f12 tools team
+[Console API Comparison](https://docs.google.com/document/d/1rtCIorwj4veWN2_wCVQqkitx2V1GSRxmuKByQtmUCr8/edit?usp=sharing) by the IE F12 tools team
 <a href="https://docs.google.com/document/d/1rtCIorwj4veWN2_wCVQqkitx2V1GSRxmuKByQtmUCr8/edit?usp=sharing">
 ![image](http://i.gyazo.com/ac9392e70ceb150430c3df72fd070ded.png)
 </a>
