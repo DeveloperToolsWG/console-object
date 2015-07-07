@@ -1,7 +1,7 @@
 * The `console` object MUST be exposed programatically regardless of whether the `console` is visible or additional tools are installed.
 * Implementations MUST use a proxy implementation to ensure that calling unimplemented methods will never throw.
 * The Logging APIs MUST accept (and make use of for logging purposes) an arbitrary number of arguments.
-* Implementations SHOULD follow the follow the [Format Specifiers](#format-specifiers) recommendations 
+* Implementations SHOULD follow the [Format Specifiers](#format-specifiers) recommendations 
 * specified in this document, but MAY decide what format to log.  Implementations MUST provide 
 * high resolution timestamps for the [Timing](#timing) and [Profiling](#profiling) APIs specified here.
 * Logging APIs SHOULD all be callable functions allowing them to be passed as arguments to error handling callbacks, forEach methods, etc.
