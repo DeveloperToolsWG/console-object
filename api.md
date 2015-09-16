@@ -212,6 +212,7 @@ The functions supporting these specifiers are [`console.debug()`](#consoledebugo
 | `%c`              | Formats the output string according to CSS styles you provide                      |
 
 * Firebug supports limiting the number of decimal places via `%.xf`, where `x` is the number of decimal places.
+* When multiple `%c` specifiers are included next to each other with no space, then the last style should be used.  For example: `console.log("%c%chi", "color: green", "background: red"); // Should use "background: red"`
 
 ```javascript
 console.log("Hello %s", "Brian");
